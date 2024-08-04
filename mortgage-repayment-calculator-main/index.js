@@ -15,7 +15,7 @@ function calculate(){
     
     outputEl.classList = 'third'
 
-    if (repaymentRadio.checked){
+    if (radioInterest.checked){
     
       const monthlyInterest = interestValue / (100 * 12);
       const months = yearsValue * 12;
@@ -34,16 +34,16 @@ function calculate(){
       <p>Your results are shown below based on the information you provided. 
       To adjust the results, edit the form and click “calculate repayments” again.</p>
       <div class="three">  
-        <p>Your monthly repayments</p>
+        <p>Your monthly interest</p>
         <div id="output-one">$${((totalPayment - amountValue) / months).toFixed(2)}</div>
         <hr>
-        <p>Total you'll repay over the term</p>
+        <p>Total you'll pay of interests over the term</p>
         <div id="output-two">$${(totalPayment - amountValue).toFixed(2)}</div>
       </div>  
     </div>`
     document.querySelector('.second').classList = 'fourth'
 }
-    else if (radioInterest.checked){
+    else if (repaymentRadio.checked){
     
       const monthlyInterest = interestValue / (100 * 12);
       const months = yearsValue * 12;
