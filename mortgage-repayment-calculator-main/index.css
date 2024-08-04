@@ -1,0 +1,254 @@
+:root {
+    --heading-size-1: 24px;
+    --text-size: 16px;
+  
+    /*Colors*/
+    --background-color-1: #e3f4fc;
+    --background-color-2: #133040;
+    --background-color-3: #ffffff;
+    --button-color: #d9db30;
+    --button-hover-color: #dedf80;
+    --invalid-color: #d83428;
+    --text-color-1: #ffffff;
+    --text-color-2: #9abed5;
+  
+    --slate-100: hsl(202, 86%, 94%);
+    --slate-300: hsl(203, 41%, 72%);
+    --slate-500: hsl(200, 26%, 54%);
+    --slate-700: hsl(200, 24%, 40%);
+    --slate-900: hsl(202, 55%, 16%);
+  }
+
+body{
+    margin: 0;
+    background-color: var(--slate-100);
+    z-index: 100;
+    font-family: 'Plus Jakarta Sans';
+}
+
+h1{
+    color: var(--slate-900);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h2{
+    color: var(--slate-900);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+input{
+    border: none;
+    font-size: 16px;
+}
+
+hr{
+    color: gainsboro;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header a{
+    font-size: 16px;
+    width: 50%;
+    margin-left: 3em;
+}
+
+.second{
+    display: none;
+}
+
+.third{
+    display: none;
+}
+
+.inputs{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 12em auto ;
+    background-color: white;
+    border-radius: 2em;
+}
+
+.output{
+    width: 50%;
+    background-color: var(--slate-700);
+    color: white;
+    padding: 5em 1em;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.radio{
+    display: flex;
+    flex-direction: column;
+    color: var(--slate-900);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.radio div{
+    border: 1px solid var(--slate-700);
+    margin-top: 1em;
+    padding: 0.5em ;
+    border-radius: 0.2em;
+}
+
+.amount{
+    border: 1px solid var(--slate-700);
+    margin-top: 0.5em;
+    border-radius: 0.2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.amount input{
+    width: 90%;
+}
+
+.amount p{
+    width: 10%;
+    background-color: var(--slate-100);
+    height: 100%;
+    margin-top: -0.1px;
+    color: var(--slate-900);
+    text-align: center;
+}
+
+#amount{
+    width: 90%;
+}
+
+.termrate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mortgage{
+    width: 48%;
+    padding-right: 0.1em;
+    margin-top: -0.1px;
+    height: 100%;
+}
+
+.mortgage div{
+    border: 1px solid var(--slate-500);
+    border-radius: 0.2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.mortgage input{
+    width: 70%;
+}
+
+.mortgage p{
+    background-color: var(--slate-100);
+    width: 30%;
+    height: 100%;
+    margin-top: -0.1px;
+    color: var(--slate-900);
+    text-align: center;
+}
+
+#interest{
+    width: 50%;
+    padding-right: 3em;
+}
+
+#years{
+    width: 50%;
+    padding-right: 3em;
+}
+
+.type button{
+    background-color: var(--button-color);
+    margin-top: 2em;
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 2em;
+}
+
+.type button:hover{
+    background-color: var(--button-hover-color);
+}
+
+input[type="radio"]:checked+label{
+    background-color: var(--button-hover-color);
+}
+
+ /*outputs*/
+p{
+    color: var(--slate-100);
+}
+
+ .three{
+    background-color: var(--slate-900);
+    padding: 1em 2em;
+    border-radius: 1em;
+    box-shadow: 0px -5px  var(--button-color);
+    margin-top: 2em;
+    color: var(--slate-100);
+ }
+
+ #output-one{
+    color: var(--button-color);
+    font-size: 34px;
+ }
+
+ #output-two{
+    color:white;
+    font-size: 26px;
+ }
+
+ /*Mobile*/
+ @media (max-width:500px){
+    body{
+        background-color: white;
+    }
+    .container{
+        width: 350px;
+        flex-direction: column;
+        margin: 0 auto ;
+        background-color: white;
+        border-radius: 0em;
+        align-items: center;
+        margin-left: 3em;
+        padding-right: 3em;
+    }
+    .inputs{
+        width: 100%;
+    }
+    .termrate{
+        display: flex;
+        flex-direction: column;
+    }
+    .output{
+        width: 100%;
+        padding: 3em;
+        border-bottom-left-radius: 0em;
+        border-top-right-radius: 0em;
+        border-bottom-right-radius: 0em;
+    }
+    .mortgage{
+        width: 100%;
+    }
+ }
