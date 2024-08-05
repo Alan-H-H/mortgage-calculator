@@ -225,7 +225,7 @@ p{
         background-color: white;
     }
     .container{
-        width: 350px;
+        width: 300px;
         flex-direction: column;
         margin: 0 auto ;
         background-color: white;
